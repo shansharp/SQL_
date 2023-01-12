@@ -1,0 +1,22 @@
+
+Check out my store database here! First, I created a hypothetical Store Database, from there I have displayed the database by price. 
+
+CREATE TABLE shan_sharp_store (aisle INTEGER, item TEXT, price INTEGER, category TEXT, instock TEXT) ;
+
+INSERT INTO shan_sharp_store VALUES (1, "toothbrush", 5, "personal care", "yes") ; 
+INSERT INTO shan_sharp_store VALUES (1, "deodorant", 8, "personal care", "yes") ;
+INSERT INTO shan_sharp_store VALUES (4, "rice", 3, "grocery", "no");
+INSERT INTO shan_sharp_store VALUES (4, "pudding", 5, "grocery", "yes");
+INSERT INTO shan_sharp_store VALUES (8, "bicycle", 100, "outdoor toys", "yes") ;
+INSERT INTO shan_sharp_store VALUES (10, "legos", 59, "toys", "no") ; 
+INSERT INTO shan_sharp_store VALUES (10, "hot wheels", 10, "toys", "yes") ;
+INSERT INTO shan_sharp_store VALUES (13, "dvd", 12, "entertainment", "yes") ; 
+INSERT INTO shan_sharp_store VALUES (13, "cd", 15, "entertainment", "yes") ;
+INSERT INTO shan_sharp_store VALUES (7, "tampons", 8, "essentials", "yes") ; 
+INSERT INTO shan_sharp_store VALUES (7, "pads", 5, "essentials", "yes") ; 
+INSERT INTO shan_sharp_store VALUES (5, "dog food", 25, "pets", "no") ;
+INSERT INTO shan_sharp_store VALUES (5, "bully sticks", 15, "pets", "no") ; 
+INSERT INTO shan_sharp_store VALUES (17, "underwear", 7, "mens clothes", "yes") ; 
+INSERT INTO shan_sharp_store VALUES (17, "hoodie", 35, "mens clothes", "no") ;
+
+SELECT * FROM shan_sharp_store ORDER BY price  asc ; 

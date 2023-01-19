@@ -1,0 +1,24 @@
+Here I created multiple tables about famous bands/artists and then used JOIN to answer questions about them!
+
+CREATE TABLE band (id INTEGER PRIMARY KEY, artist_name TEXT, genre TEXT, number_albums INTEGER) ; 
+
+INSERT INTO band VALUES (1, "top", "pop", 4); 
+INSERT INTO band VALUES (2, "half_alive", "alt_rock", 1); 
+INSERT INTO band VALUES (3, "judah", "alt_rock", 2); 
+
+CREATE TABLE concerts (id INTEGER PRIMARY KEY, band_id INTEGER, artist_name TEXT, pyrotechnics TEXT, tour_locations TEXT); 
+
+INSERT INTO concerts VALUES (1, 1, "top", "yes", "international"); 
+INSERT INTO concerts VALUES (2, 2, "half_alive", "no", "international");
+INSERT INTO concerts VALUES (3, 3, "judah", "unknown", "domestic"); 
+
+CREATE TABLE albums (id INTEGER PRIMARY KEY, album_name TEXT, length INTEGER, songs INTEGER);
+
+INSERT INTO albums VALUES (1, "vessel", 1.5, 12); 
+INSERT INTO albums VALUES (2, "conditions_of_a_punk", 1.6, 14);
+INSERT INTO albums VALUES (3, "pep_talks", 1.7, 13);
+
+SELECT band.artist_name, pyrotechnics 
+FROM band
+JOIN concerts 
+ON band.id=concerts.band_id ;
